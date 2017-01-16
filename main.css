@@ -6,6 +6,10 @@ body {
     color: #000000;
     background-color: #2f3133;
 }
+a {
+    text-decoration: none;
+    color: #003a62;
+}
 h1 {
     font-size: 29.4px;
     line-height: 41.8px;
@@ -25,23 +29,66 @@ p, span {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
 header {
-    background: #001c2f;
-    color: #ffffff;
+    background: #000000;
+    border-bottom: 4px solid #c9c9c9;
+    box-shadow: 0px 0px 3px #000000;
+    -moz-box-shadow: 0px 0px 3px #000000;
+    -webkit-box-shadow: 0px 0px 3px #000000;
+    position: inherit;
+    z-index: 2;
 }
 
+header .container {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: inherit;
+    width: 350px;
+}
 
 header nav {
     box-sizing: border-box;
-    height: 30px;
 }
+
+header nav a {
+    font-family: 'Oswald',sans-serif;
+    font-weight: 300;
+    font-size: 20.524px;
+    line-height: 22px;
+    padding: 22px 15px;
+    text-shadow: none;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+header nav a:hover {
+    background-color: transparent;
+    color: #0067af;
+    text-decoration: none;
+}
+header nav a.active {
+    background-color: #003a62;
+}
+
+header li {
+    display: inline-block;
+}
+
+
 #content-section {
     background: #ebebeb;
     padding: 30px 0;
     text-align: center;
 }
+#content-section .container {
+    background: inherit;
+}
 .container {
-    width: 724px;
+    width: 800px;
     margin: 0 auto;
     padding: 1em;
     background: white;
@@ -70,7 +117,10 @@ img { max-width: 100%; }
     box-sizing: border-box;
 }
 
-.carousel{position:relative}.carousel-inner{position:relative;overflow:hidden;width:100%}.carousel-inner>.item{display:none;position:relative;-webkit-transition:.6s ease-in-out left;transition:.6s ease-in-out left}.carousel-inner>.item>a>img,.carousel-inner>.item>img{line-height:1}.carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev{display:block}.carousel-inner>.active{left:0}.carousel-inner>.next,.carousel-inner>.prev{position:absolute;top:0;width:100%}.carousel-inner>.next{left:100%}.carousel-inner>.prev{left:-100%}.carousel-inner>.next.left,.carousel-inner>.prev.right{left:0}.carousel-inner>.active.left{left:-100%}.carousel-inner>.active.right{left:100%}.carousel-control{position:absolute;top:0;left:0;bottom:0;width:15%;opacity:.5;filter:alpha(opacity=50);font-size:20px;color:#fff;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,.6)}.carousel-control.left{}.carousel-control.right{left:auto;right:0;}.carousel-control:focus,.carousel-control:hover{outline:0;color:#fff;text-decoration:none;opacity:.9;filter:alpha(opacity=90)}.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{position:absolute;top:50%;z-index:5;display:inline-block}.carousel-control .glyphicon-chevron-left,.carousel-control .icon-prev{left:50%}.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next{right:50%}.carousel-control .icon-next,.carousel-control .icon-prev{width:20px;height:20px;margin-top:-10px;margin-left:-10px;font-family:serif}.carousel-control .icon-prev:before{content:'\2039'}.carousel-control .icon-next:before{content:'\203a'}.carousel-indicators{position:absolute;bottom:10px;left:50%;z-index:15;width:60%;margin-left:-30%;padding-left:0;list-style:none;text-align:center}.carousel-indicators li{display:inline-block;width:10px;height:10px;margin:1px;text-indent:-999px;border:1px solid #fff;border-radius:10px;cursor:pointer;background-color:#000 \9;background-color:rgba(0,0,0,0)}.carousel-indicators .active{margin:0;width:12px;height:12px;background-color:#fff}.carousel-caption{position:absolute;left:15%;right:15%;bottom:20px;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,.6)}.carousel-caption .btn{text-shadow:none}@media screen and (min-width:768px){.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{width:30px;height:30px;margin-top:-15px;margin-left:-15px;font-size:30px}.carousel-caption{left:20%;right:20%;padding-bottom:30px}.carousel-indicators{bottom:20px}}
+.carousel{position:relative}.carousel-inner{position:relative;overflow:hidden;width:100%}.carousel-inner>.item{display:none;position:relative;-webkit-transition:.6s ease-in-out left;transition:.6s ease-in-out left}.carousel-inner>.item>a>img,.carousel-inner>.item>img{line-height:1}.carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev{display:block}.carousel-inner>.active{left:0}.carousel-inner>.next,.carousel-inner>.prev{position:absolute;top:0;width:100%}.carousel-inner>.next{left:100%}.carousel-inner>.prev{left:-100%}.carousel-inner>.next.left,.carousel-inner>.prev.right{left:0}.carousel-inner>.active.left{left:-100%}.carousel-inner>.active.right{left:100%}.carousel-control{position:absolute;top:0;left:0;bottom:0;width:15%;opacity:.5;filter:alpha(opacity=50);font-size:20px;color:#fff;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,.6)}.carousel-control.left{}.carousel-control.right{left:auto;right:0;}.carousel-control:focus,.carousel-control:hover{outline:0;color:#fff;text-decoration:none;opacity:.9;filter:alpha(opacity=90)}.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{position:absolute;top:50%;z-index:5;display:inline-block}.carousel-control .glyphicon-chevron-left,.carousel-control .icon-prev{left:50%}.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next{right:50%}.carousel-control .icon-next,.carousel-control .icon-prev{width:20px;height:20px;margin-top:-10px;margin-left:-10px;font-family:serif}.carousel-control .icon-prev:before{content:'\2039'}.carousel-control .icon-next:before{content:'\203a'}
+.carousel-indicators{ position:absolute;top:10px;left:50%;z-index:15;width:60%;margin-left:-30%;padding-left:0;list-style:none;text-align:center}
+.carousel-indicators li{display:inline-block;width:10px;height:10px;margin:1px;text-indent:-999px; border-radius:10px;cursor:pointer;background-color:#ccc;}
+.carousel-indicators .active{background-color:#fff}@media screen and (min-width:768px){.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{width:30px;height:30px;margin-top:-15px;margin-left:-15px;font-size:30px}.carousel-caption{left:20%;right:20%;padding-bottom:30px}.carousel-indicators{bottom:20px}}
 
 .carousel-control .glyphicon-chevron-right {
     display: block;
